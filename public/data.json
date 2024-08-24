@@ -1,0 +1,31 @@
+[
+  
+    {
+        "id": "2",
+        "name": "World War II Analysis",
+        "subject": "History",
+        "image": "https://i.ibb.co/DkLdXdt/download.jpg",
+        "level": "Advanced",
+        "description": "Analyze the key events of World War II and their global impact & Know the history.",
+        "dueDate": "2024-09-20"
+    },
+    {
+        "id": "3",
+        "name": "Algebraic Expressions",
+        "subject": "Mathematics",
+        "image": "https://i.ibb.co/wK35sZ9/images.jpg",
+        "level": "Beginner",
+        "description": "Solve basic algebraic expressions and understand their applications.",
+        "dueDate": "2024-09-10"
+    },
+    {
+        "id": "4",
+        "name": "Introduction to HTML & CSS",
+        "subject": "CSE",
+        "image": "https://i.ibb.co/4SftrvV/images-2.jpg",
+        "level": "Beginner",
+        "description": "Create a simple webpage using HTML and style it with CSS.HTML is the standard language used to create and structure content on the web.",
+        "dueDate": "2024-09-18"
+    }
+  
+]

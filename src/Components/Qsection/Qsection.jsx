@@ -2,7 +2,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const Qsection = () => {
     return (
-  <div className="mt-10">
+  <div >
 
 <h1 className='text-4xl   text-center pb-10' style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'bold'  }}>
       Frequently{' '}
