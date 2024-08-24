@@ -13,6 +13,12 @@ import {
 import Root from './Components/Root/Root';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
+import LogIn from './Components/LogIn/LogIn';
+import SignUp from './Components/SignUp/SignUp';
+import AuthProvider from './Components/AuthProvider/AuthProvider';
+
+
+
 
 
 const router = createBrowserRouter([
@@ -30,6 +36,15 @@ const router = createBrowserRouter([
     path:"/about",
     element: <About></About>
   },
+  {
+    path:"/login",
+    element: <LogIn></LogIn>
+  },
+  {
+    path:"/signup",
+    element: <SignUp></SignUp>
+  },
+
 
 
 
@@ -39,6 +54,12 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+     
+     
+     <AuthProvider>
      <RouterProvider router={router} />
+     </AuthProvider>
+     
+     
   </StrictMode>,
 )
