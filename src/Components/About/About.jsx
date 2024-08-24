@@ -1,8 +1,17 @@
 
 
 const About = () => {
+
+  
+
+
+ 
+   
+  
     return (
         <div className="bg-red-50">
+
+
 
 
     {/* 1st */}
@@ -75,6 +84,8 @@ const About = () => {
 
     </div>
   </div>
+
+  
 </div>
 
 {/* 3rd end */}

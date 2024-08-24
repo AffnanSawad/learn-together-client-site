@@ -16,6 +16,7 @@ import About from './Components/About/About';
 import LogIn from './Components/LogIn/LogIn';
 import SignUp from './Components/SignUp/SignUp';
 import AuthProvider from './Components/AuthProvider/AuthProvider';
+import AddAss from './Components/AddAss/AddAss';
 
 
 
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
     path:"/signup",
     element: <SignUp></SignUp>
   },
+  {
+    path:"/creating",
+    element: <AddAss></AddAss>
+  },
+ 
 
 
 
