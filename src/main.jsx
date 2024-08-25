@@ -20,6 +20,7 @@ import AddAss from './Components/AddAss/AddAss';
 import Assignments from './Components/Assignments/Assignments';
 import UpdateCard from './Components/UpdateCard/UpdateCard';
 import Details from './Components/Details/Details';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
 
@@ -50,11 +51,11 @@ const router = createBrowserRouter([
   },
   {
     path:"/creating",
-    element: <AddAss></AddAss>
+    element: <PrivateRoute><AddAss></AddAss></PrivateRoute>
   },
   {
     path:"/assignments",
-    element: <Assignments></Assignments>,
+    element: <PrivateRoute><Assignments></Assignments>,</PrivateRoute>,
     loader: ()=> fetch("http://localhost:5000/creating")
   },
   {
