@@ -17,6 +17,8 @@ import LogIn from './Components/LogIn/LogIn';
 import SignUp from './Components/SignUp/SignUp';
 import AuthProvider from './Components/AuthProvider/AuthProvider';
 import AddAss from './Components/AddAss/AddAss';
+import Assignments from './Components/Assignments/Assignments';
+import UpdateCard from './Components/UpdateCard/UpdateCard';
 
 
 
@@ -48,6 +50,16 @@ const router = createBrowserRouter([
   {
     path:"/creating",
     element: <AddAss></AddAss>
+  },
+  {
+    path:"/assignments",
+    element: <Assignments></Assignments>,
+    loader: ()=> fetch("http://localhost:5000/creating")
+  },
+  {
+    path:"/update/:id",
+    element: <UpdateCard></UpdateCard>,
+    loader: ({params})=> fetch(`http://localhost:5000/creating/${params.id}`)
   },
  
 

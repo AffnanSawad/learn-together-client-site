@@ -1,4 +1,4 @@
-
+import Swal from 'sweetalert2'
 
 const AddAss = () => {
 
@@ -10,11 +10,48 @@ const AddAss = () => {
         const description = e.target.description.value;
         const marks = e.target.marks.value ;
         const photo = e.target.url.value;
+        const subject = e.target.subject.value;
        
     
-        const newAssignment = {name,description,marks,photo};
+        const newAssignment = {name,description,marks,photo,subject};
     
         console.log(newAssignment);
+
+
+
+    // post / create assignmnt by CRUD
+    fetch("http://localhost:5000/creating",{
+
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newAssignment),
+    })
+    .then(res=>res.json())
+    .then(data=>{
+
+      console.log(data);
+
+      if(data.insertedId){
+
+        Swal.fire({
+          title: 'Success!',
+          text: 'Do you want to create this Assignment?',
+          icon: 'success',
+          confirmButtonText: 'Cool'
+        })
+
+      }
+    })
+
+
+
+
+
+
+
+
     }
 
 
@@ -37,6 +74,20 @@ const AddAss = () => {
           <input type="text" name="description" placeholder="description" className="input input-bordered" required />
           
         </div>
+
+
+        {/*  */}
+
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text font-bold">Subject</span>
+          </label>
+          <input type="text" name="subject" placeholder="Subject" className="input input-bordered" required />
+          
+        </div>
+
+
+
        
         <div className="form-control">
           <label className="label">
