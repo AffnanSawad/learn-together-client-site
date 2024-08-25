@@ -3,6 +3,7 @@ import { createContext, useEffect, useState } from "react";
 // import auth from "../../Firebase/firebase.config";
 import { FacebookAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import auth from "../Firebase/firebase.config";
+import axios from "axios";
 
 // creating ConText
 export const AuthContext = createContext(null);
@@ -87,10 +88,39 @@ const facebookLogin = ()=>{
     const unSubscribe = onAuthStateChanged(auth , currentuser =>{
 
 
+                // email pawa jwt er jnno
+                const userEmail = currentuser?.email 
+                const loggedUser = {email:userEmail}
+        
+        
+
+
         setuser(currentuser);
 
         // false hbe
         setloading(false);
+
+    
+        if(currentuser){
+
+            // const loggedUser = {email:userEmail}
+    
+            axios.post( 'http://localhost:5000/jwt',loggedUser, {withCredentials:true} )
+
+            .then(res=>{
+                console.log('Token Response',res.data);
+            })    
+
+        }
+    
+        else{
+            axios.post( 'http://localhost:5000/logout',loggedUser, {withCredentials:true} )
+
+            .then(res=>{
+                console.log('logout Response',res.data);
+            })
+        }
+
      })
 
      return ()=>{

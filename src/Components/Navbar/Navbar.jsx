@@ -84,7 +84,7 @@ const Navbar = () => {
     <li className="font-bold"> <Link  to="/creating"> Create Assignments </Link>  </li>
 
 
-<li className="font-bold"> <Link  to="/pending">Pending Assignments </Link>  </li>
+
     
     </>
 }

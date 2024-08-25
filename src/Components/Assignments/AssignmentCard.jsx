@@ -87,7 +87,15 @@ const AssignmentCard = ({collect,setRemainingCards,remainingCards}) => {
         </div>
 
           <div className="card-actions justify-end grid grid-rows-1 gap-2 mt-5">
-            <button className="btn btn-primary text-white">View Details</button>
+           
+           
+            <Link to={`/details/${_id}`} >
+            
+            <button className="btn btn-primary text-white">Submit Now</button>
+            
+            </Link>
+
+
 
             <Link to={`/update/${_id}`} >
             
