@@ -9,13 +9,14 @@ const UpdateCard = () => {
 
 
 
-    // handle update
+    // import loader .. [main jsx e loader use kora hoise]
+    
     const loadedUpdateCards = useLoaderData();
 
     const {_id,name,subject,photo,marks} = loadedUpdateCards;
 
    
-   
+   // handle update
     const handleUpdateCard = e => {
 
         e.preventDefault();
