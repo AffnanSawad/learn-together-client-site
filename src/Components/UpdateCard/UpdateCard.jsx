@@ -10,7 +10,7 @@ const UpdateCard = () => {
 
 
     // import loader .. [main jsx e loader use kora hoise]
-    
+
     const loadedUpdateCards = useLoaderData();
 
     const {_id,name,subject,photo,marks} = loadedUpdateCards;
@@ -99,7 +99,7 @@ const UpdateCard = () => {
       
     </div>
     <div className="form-control mt-6">
-     <input type="submit" value='Update My Food' className="btn btn-accent" />
+     <input type="submit" value='Update My Assignment' className="btn btn-accent text-white " />
     </div>
   </form>
 
